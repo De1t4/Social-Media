@@ -1,0 +1,370 @@
+//DARK THEME
+$Toggle: hsl(230, 22%, 74%);
+$VeryDarkBlueBackground: hsl(230, 17%, 14%);
+$VeryDarkBlueBackgroundTop: hsl(232, 19%, 15%);
+$DarkDesaturatedBlueBackgroundCard: hsl(228, 28%, 20%);
+$DesaturatedBlue: hsl(228, 34%, 66%);
+$White: hsl(0, 0%, 100%);
+$LimeGreen: hsl(163, 72%, 41%);
+$BrightRed: hsl(356, 69%, 56%);
+$Facebook: hsl(208, 92%, 53%);
+$Twitter: hsl(203, 89%, 53%);
+$Instagram: linear-gradient(90deg,hsl(37, 97%, 70%), hsl(329, 70%, 58%)) ;
+$YouTube: hsl(348, 97%, 39%);
+$Toggle1: hsl(210, 78%, 56%) hsl(146, 68%, 55%);
+
+//LIGHT THEME
+$VeryPaleBlue: hsl(225, 100%, 98%);
+$LightGrayishBlue: hsl(227, 47%, 96%);
+$DarkGrayishBlue: hsl(228, 12%, 44%);
+$VeryDarkBlue: hsl(230, 17%, 14%);
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+}
+main{
+    width: 100%;
+    height: auto;
+    background-color: $VeryDarkBlueBackground;
+    padding: 2.5rem 8.55rem;
+    .title-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .content-title{
+            h2{
+                color: $White;
+            }
+            .total-follows{
+                color: $DesaturatedBlue;
+                font-weight: 700;
+            }
+        }
+        .section-theme{
+            display: flex;
+            align-items: center;
+            p{
+                color: $DesaturatedBlue;
+                font-weight: 700;
+                margin-right: 1rem;
+            }
+            .content-btn{
+                padding: 0.2rem;
+                width: 3rem;
+                height: 1.75rem;
+                border-radius: 1rem;
+                background: linear-gradient(90deg, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+                &:hover{
+                    transition: all 500ms;
+                    cursor: pointer;
+                    filter: brightness(120%);
+                }
+                .btn-radio{
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    border-radius: 50%;
+                    background-color: $VeryDarkBlueBackgroundTop;
+                    transition: all 500ms;
+                }
+                .radioMove{
+                    transition: all 500ms;
+                    margin-left: 1.2rem;
+                }
+            }
+        }
+    }
+    .cards-content{
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 16rem);
+        grid-template-rows: repeat(1, 13.5rem);
+        gap: 1rem;
+        .card-facebook{
+            border-top: 3px solid $Facebook;
+        }
+        .card-twitter{
+            border-top: 3px solid $Twitter;
+        }
+        .card-instagram{
+            overflow: hidden;
+            &::before{
+                width: 10rem;
+                content: "";
+                width: 100%;
+                position: relative;
+                top: -1.57rem;
+                height: 4px;
+                background: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+            }
+        }
+        .card-youtube{
+            border-top: 3px solid $YouTube;
+        }
+        .card{
+            background-color: $DarkDesaturatedBlueBackgroundCard;
+            border-radius: 0.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                cursor: pointer;
+                filter: brightness(130%);
+            }
+            .profile{
+                color: $DesaturatedBlue;
+                font-weight: 700;
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+                display: flex;
+                svg{
+                    margin-right: 0.75rem;
+                }
+            }
+            h1{
+                color: $White;
+                font-size: 3.5rem;
+            }
+            .followers{
+                text-transform: uppercase;
+                color: $DesaturatedBlue;
+                letter-spacing: 0.25rem;
+            }
+            .subscribers{
+                color: $DesaturatedBlue;
+                letter-spacing: 0.25rem;
+                text-transform: uppercase;
+            }
+            .increase{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 1.25rem;
+                font-weight: 700;
+                color: $LimeGreen;
+                svg{
+                    margin-right: 0.25rem;
+                }
+            }
+            .increase-down{
+                color: $BrightRed;
+                .icon-down{
+                    transform: rotate(180deg);
+                    path{
+                        fill: red;
+                    }
+                }
+            }
+        }
+    }
+    .subtitle{
+        color: $White;
+        margin: 2rem 0 1rem;
+    }
+    .content-cards-stats{
+        display: grid;
+        grid-template-columns: repeat(4, 16rem);
+        grid-template-rows: repeat(2, 7.875rem);
+        gap: 1rem;
+        .card-stats{
+            background-color: $DarkDesaturatedBlueBackgroundCard;
+            padding: 1.5rem;
+            border-radius: 0.25rem;
+            &:hover{
+                cursor: pointer;
+                filter: brightness(130%);
+            }
+            .feature{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1.75rem;
+                p{
+                    color: $DesaturatedBlue;
+                    font-weight: 700;
+                }
+            }
+            .increase-percent{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h2{
+                    color: $White;
+                }
+                .percent{
+                    display: flex;
+                    align-items: center;
+                    color: $LimeGreen;
+                    svg{
+                        margin-right: 0.25rem;
+                    }
+                }
+                .percent-down{
+                    color: $BrightRed;
+                    .icon-down{
+                        transform: rotate(180deg);
+                        path{
+                            fill: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .attribution{
+        text-align: center;
+    }
+}
+
+
+
+
+.main-theme{
+    background-color: $White;
+    .title-top{
+        .content-title{
+            h2{
+                color: $VeryDarkBlue;
+            }
+            .total-follows{
+                color: $DarkGrayishBlue;
+            }
+        }
+        .section-theme{
+            p{
+                color: $Toggle;
+            }
+        }
+    }
+    .cards-content{
+        .card{
+            background: $LightGrayishBlue;
+            &:hover{
+                opacity: 0.8;
+                filter: brightness(100%);
+            }
+            h1{
+                color: $VeryDarkBlue;
+            }
+        }
+    }
+    .content-cards-stats{
+        .card-stats{
+            background-color: $LightGrayishBlue;
+            .increase-percent{
+                h2{
+                    color: $VeryDarkBlue;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1100px) {
+    main{
+        padding: 2rem 2rem; 
+        .title-top{
+            flex-direction: column;
+            align-items: stretch;
+            .content-title{
+                margin-bottom: 2rem;
+            }
+            .section-theme{
+                padding-top: 1rem;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid $DesaturatedBlue;
+            }
+        }
+        .cards-content{
+            padding: 0;
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: repeat(2, 13.5rem);
+            row-gap: 2rem;
+        }
+        .content-cards-stats{
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: repeat(4, 8rem);
+            .card-stats{
+                &:hover{
+                    filter: brightness(100%);
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    main{
+        padding: 2rem;
+        .title-top{
+            flex-direction: column;
+            align-items: stretch;
+            .content-title{
+                margin-bottom: 2rem;
+            }
+            .section-theme{
+                padding-top: 1rem;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid $DesaturatedBlue;
+            }
+        }
+        .cards-content{
+            padding: 0;
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: repeat(2, 13.5rem);
+            row-gap: 2rem;
+        }
+        .content-cards-stats{
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: repeat(4, 8rem);
+            .card-stats{
+                &:hover{
+                    filter: brightness(100%);
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    main{
+        padding: 2rem;
+        .title-top{
+            flex-direction: column;
+            align-items: stretch;
+            .content-title{
+                margin-bottom: 2rem;
+            }
+            .section-theme{
+                padding-top: 1rem;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid $DesaturatedBlue;
+            }
+        }
+        .cards-content{
+            padding: 0;
+            grid-template-columns: repeat(1, 100%);
+            grid-template-rows: repeat(4, 13.5rem);
+            row-gap: 2rem;
+        }
+        .content-cards-stats{
+            grid-template-columns: repeat(1, 100%);
+            grid-template-rows: repeat(8, 8rem);
+            .card-stats{
+                &:hover{
+                    filter: brightness(100%);
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
